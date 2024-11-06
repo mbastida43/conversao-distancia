@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: conversao-distancia
 spec:
-  replicas: 6
+  replicas: 8
   selector: 
     matchLabels:
       app: conversao-distancia
@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: conversao-distancia
-        image: marlonbastida/conversao-distancia:v1
+        image: marlonbastida/conversao-distancia:v2
         ports:
-        - containerPort: 5000
+          - containerPort: 5000
 ---
 apiVersion: v1 
 kind: Service
